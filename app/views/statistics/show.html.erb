@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>References:</b>
+  <%= @statistic.references %>
+</p>
+
+<p>
+  <b>Strength:</b>
+  <%= @statistic.strength %>
+</p>
+
+<p>
+  <b>Charisma:</b>
+  <%= @statistic.charisma %>
+</p>
+
+
+<%= link_to 'Edit', edit_statistic_path(@statistic) %> |
+<%= link_to 'Back', statistics_path %>

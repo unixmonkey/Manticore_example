@@ -1,0 +1,25 @@
+<%= form_for([@character, @statistic]) do |f| %>
+  <% if @statistic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statistic.errors.count, "error") %> prohibited this statistic from being saved:</h2>
+
+      <ul>
+      <% @statistic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :strength %><br />
+    <%= f.text_field :strength %>
+  </div>
+  <div class="field">
+    <%= f.label :charisma %><br />
+    <%= f.text_field :charisma %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

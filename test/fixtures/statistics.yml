@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  references: 
+  strength: 1
+  charisma: 1
+
+two:
+  references: 
+  strength: 1
+  charisma: 1
