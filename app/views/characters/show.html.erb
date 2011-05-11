@@ -5,7 +5,24 @@
   <%= @character.name %>
 </p>
 
-<%= render "statistics/form" %>
+<p>
+  <b>Strength:</b>
+  <%= @statistic.strength || 'Not set' %>
+</p>
+
+<p>
+  <b>Charisma:</b>
+  <%= @statistic.charisma || 'Not set' %>
+</p>
+
+<% if @statistic.new_record? %>
+  <%= link_to 'Add Statistics', new_character_statistic_path(@character) %>
+<% else %>
+  <%= link_to 'Edit Statistics', edit_character_statistic_path(@character,@statistic) %>
+<% end %>
+
+<%#= render "statistics/form" %>
+<hr/>
 
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>
