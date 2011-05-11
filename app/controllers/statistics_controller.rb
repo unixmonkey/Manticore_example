@@ -1,5 +1,15 @@
 class StatisticsController < ApplicationController
 
+  def new
+    @character = Character.find(params[:character_id])
+    @statistic = @character.create_statistic(params[:statistic])
+  end
+
+  def edit
+    @character = Character.find(params[:character_id])
+    @statistic = @character.statistic
+  end
+
   def create
     @character = Character.find(params[:character_id])
     @statistic = @character.create_statistic(params[:statistic])
